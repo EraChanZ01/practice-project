@@ -1,0 +1,100 @@
+@mixin button() {
+    height: 70px;
+    width: 220px;
+    padding: 10px;
+    border: 1px solid rgb(76, 132, 216);
+    margin: 2px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+$mainColor1: rgb(252, 252, 252);
+$mainColor2: rgb(76, 132, 216);
+
+
+
+.mainPageTest {
+    width: 100%;
+
+    .testPageArtButton {
+        display: flex;
+        justify-content: center;
+
+        .testPageArtButtonLeft {
+            @include button();
+            background-color: $mainColor2;
+            color: $mainColor1;
+        }
+
+        .testPageArtButtonRight {
+            @include button();
+            background-color: $mainColor1;
+            color: $mainColor2;
+        }
+    }
+
+    .testPageCardMain {
+        height: 900px;
+        background-color: $mainColor2;
+        margin-top: 60px;
+        padding-top: 40px;
+
+        .testPageCardHeader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+
+            h1 {
+                color: rgb(252, 252, 252);
+                font-size: 60px;
+                margin: 10px;
+                @media screen and (min-width:1250px) and (max-width:1650px) {
+                    font-size: 50px;
+                }
+                @media screen and (max-width:1250px){
+                    font-size: 40px;
+                }
+            }
+
+            p {
+                color: rgb(252, 252, 252);
+                margin-top: 20px;
+                font-size: 32px;
+                margin-bottom: 40px;
+                @media screen and (min-width:1250px) and (max-width:1650px) {
+                    font-size: 28px;
+                }
+                @media screen and (max-width:1250px){
+                    font-size: 21px;
+                }
+            }
+        }
+
+        .articlePageCard {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(3, 500px);
+            grid-template-rows: 200px 200px 200px;
+            column-gap: 20px;
+            row-gap: 20px;
+        }
+
+        @media screen and (min-width:1250px) and (max-width:1650px) {
+            .articlePageCard {
+                grid-template-columns: repeat(3, 400px);
+                grid-template-rows: 150px 150px 150px;
+                column-gap: 15px;
+                row-gap: 15px;
+            }
+        }
+        @media screen and (max-width:1250px){
+            .articlePageCard {
+                grid-template-columns: repeat(3, 320px);
+                grid-template-rows: 120px 120px 120px;
+                column-gap: 15px;
+                row-gap: 15px;
+            }
+        }
+    }
+}
