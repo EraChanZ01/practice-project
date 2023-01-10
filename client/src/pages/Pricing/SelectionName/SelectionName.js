@@ -1,4 +1,5 @@
 import React from 'react';
+import style from "./SelectionName.module.sass"
 
 const SelectionName = ({ setNamePrice }) => {
   const HandelChange = ({ target }) => {
@@ -7,10 +8,10 @@ const SelectionName = ({ setNamePrice }) => {
 
   return (
     <>
-      <section>
-        <span>
+      <section className={style.pageSelectionName}>
+        <span className={style.pageSelectionNameText}>
           Pricing for
-          <select onChange={(event) => HandelChange(event)}>
+          <select className={style.pageSelectionNameSelect} onChange={(event) => HandelChange(event)}>
             <option>name</option>
             <option>logo</option>
           </select>
