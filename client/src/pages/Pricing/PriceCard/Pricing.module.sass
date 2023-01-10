@@ -1,0 +1,156 @@
+
+
+%PriceCardHeader
+  position: relative
+  height: 180px
+  padding-top: 30px
+
+%HeaderName
+  display: block
+  font-size: 32px
+  margin-left: 20px
+  margin-bottom: 20px
+  color: #e6bf99
+  font-weight: 700
+      
+%HeaderText
+  display: block
+  margin-left:20px
+  font-size: 18px
+  color:#666
+  
+
+%HeaderPrice
+  position: absolute
+  font-size: 25px
+  color: #e6bf99
+  right:30px
+  bottom:30px
+  font-weight: 600
+
+%HeaderButton
+  height:60px
+  border-radius:8px
+  border: none
+  color: white
+  font-size: 25px
+  font-weight: 800
+
+ 
+
+.pageHeaderButtonBronze
+  @extend %HeaderButton
+  background-color:#e6bf99
+ 
+
+.pageHeaderButtonGold
+  @extend %HeaderButton
+  background-color:#e6c200
+
+.pageHeaderButtonPlatinum
+  @extend %HeaderButton
+  background-color:#555
+
+.pageHeaderButtonManaged
+  @extend %HeaderButton
+  background-color:#28d2d0
+
+.pagePriceCard
+  display: flex
+  flex-direction: column
+  width: 290px
+  margin-left: 15px
+  margin-right: 15px
+
+  i
+    font-size: 14px
+    margin-right: 2px
+
+  .standartLi
+    margin-top: 10px
+    border-top: 2px solid #a6a6a6
+    padding-bottom: 15px
+    padding-top: 20px
+    
+  .startLi
+    margin-top: 10px
+    border-bottom: 2px solid #a6a6a6
+    padding-bottom: 20px
+    padding-top: 10px 
+
+  .revealingLi   
+    padding-bottom: 10px
+    padding-top: 10px  
+
+  .bonusLi
+    width:240px
+    padding-left: 8px
+    padding-top: 15px
+    font-size: 13px
+
+
+
+
+.pagePriceCardHeaderBronze
+  @extend %PriceCardHeader
+  border: 10px solid #e6bf99
+
+  .pageHeaderName
+    color: #e6bf99
+    @extend %HeaderName
+
+  .pageHeaderText
+    @extend %HeaderText
+
+  .pageHeaderPrice
+    color: #e6bf99
+    @extend %HeaderPrice
+
+.pagePriceCardHeaderGold
+  @extend %PriceCardHeader
+  border: 10px solid #e6c200
+
+  .pageHeaderName
+    color: #e6c200
+    @extend %HeaderName
+
+  .pageHeaderText
+    @extend %HeaderText
+
+  .pageHeaderPrice
+    color: #e6c200
+    @extend %HeaderPrice
+
+.pagePriceCardHeaderPlatinum
+  @extend %PriceCardHeader
+  border: 10px solid #555
+    
+  .pageHeaderName
+    color: #555
+    @extend %HeaderName
+
+  .pageHeaderText
+    @extend %HeaderText
+
+  .pageHeaderPrice
+    color: #555
+    @extend %HeaderPrice
+
+.pagePriceCardHeaderManaged
+  @extend %PriceCardHeader
+  border: 10px solid #28d2d0
+  
+  .pageHeaderName
+    color: #28d2d0
+    @extend %HeaderName
+
+  .pageHeaderText
+    @extend %HeaderText
+
+  .pageHeaderPrice
+    color: #28d2d0
+    @extend %HeaderPrice
+
+   
+      
+      
